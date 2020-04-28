@@ -1,8 +1,14 @@
 <template>
   <div id="popis">
     <div class="container">
-      <button class="btn btn-primary btn-lg" v-on:click="openProf=!openProf">Profesori</button>
-      <button class="btn btn-primary btn-lg" v-on:click="openAsis=!openAsis">Asistenti</button>
+      <button
+        class="btn btn-primary btn-lg"
+        v-on:click="openProf=!openProf; openAsis=true"
+      >Profesori</button>
+      <button
+        class="btn btn-primary btn-lg"
+        v-on:click="openAsis=!openAsis; openProf=true"
+      >Asistenti</button>
 
       <div v-if="!openProf" class="card">
         <div class="card-body">
