@@ -33,12 +33,6 @@ export default {
   }
 };
 </script>
-<style scoped>
-.container {
-  margin: 0px auto 10x;
-  padding: 0px;
-  font-family: "Gotu", sans-serif;
-  text-align: center;
-  height: 100%;
-}
+<style >
+@import "../css/styles.css";
 </style>

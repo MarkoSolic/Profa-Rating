@@ -144,18 +144,4 @@ h1:hover {
   margin-left: 100px;
   margin-right: 100px;
 }
-
-@media (max-width: 400px) {
-  h1 {
-    display: inline;
-    margin: 0 auto;
-  }
-  h1:hover {
-    margin: 0 auto;
-    letter-spacing: 5px;
-  }
-  .input-group {
-    width: 100%;
-  }
-}
 </style>
