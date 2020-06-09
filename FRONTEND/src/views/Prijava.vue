@@ -34,7 +34,10 @@
 
         <p class="text-center">
           Nemate račun?
-          <router-link to="/registracija" href="button">Registriraj se</router-link>
+          <button
+            v-on:click="prikazRegistracija= !prikazRegistracija"
+            href="button"
+          >Registriraj se</button>
         </p>
       </div>
     </div>

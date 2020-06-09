@@ -72,7 +72,7 @@
       <div class="col right">
         <app-header />
         <prijava v-show="!prikazPrijava"></prijava>
-        <registracija></registracija>
+        <registracija v-show="!prikazRegistracija"></registracija>
       </div>
     </div>
   </div>
@@ -89,7 +89,7 @@ export default {
   data() {
     return {
       prikazPrijava: true,
-      zamjena: false
+      prikazRegistracija: true
     };
   },
   components: {
