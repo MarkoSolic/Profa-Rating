@@ -84,12 +84,12 @@ import kartica from "@/components/kartica.vue";
 import header from "@/components/header";
 import prijava from "./Prijava.vue";
 import registracija from "./Registracija.vue";
+import store from "../store.js";
 
 export default {
   data() {
     return {
-      prikazPrijava: true,
-      prikazRegistracija: true
+      prikazPrijava: true
     };
   },
   components: {

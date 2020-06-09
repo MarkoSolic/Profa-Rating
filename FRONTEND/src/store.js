@@ -1,4 +1,5 @@
 export default {
+  prikazRegistracija: true,
   polje: [
     {
       id: 1,
