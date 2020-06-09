@@ -1,5 +1,5 @@
 export default {
-  prikazRegistracija: true,
+  Registriraj_se: true,
   polje: [
     {
       id: 1,

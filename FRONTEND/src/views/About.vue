@@ -70,7 +70,7 @@
         <!--     -->
       </div>
       <div class="col right">
-        <app-header />
+        <!--      <app-header /> -->
         <prijava v-show="!prikazPrijava"></prijava>
         <registracija v-show="!prikazRegistracija"></registracija>
       </div>
@@ -89,7 +89,8 @@ import store from "../store.js";
 export default {
   data() {
     return {
-      prikazPrijava: true
+      prikazPrijava: true,
+      prikazRegistracija: store.Registriraj_se
     };
   },
   components: {

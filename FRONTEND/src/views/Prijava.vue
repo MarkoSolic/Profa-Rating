@@ -46,8 +46,14 @@
  
 
 <script>
+import store from "../store.js";
 export default {
-  name: "Prijava"
+  name: "Prijava",
+  data() {
+    return {
+      prikazRegistracija: store.Registriraj_se
+    };
+  }
 };
 </script>
 <style >
