@@ -9,7 +9,7 @@
 import { profs } from "@/services";
 import regeneratorRuntime from "regenerator-runtime";
 import kartica from "@/components/kartica.vue";
-import modal from "@/components/modalPrijava.vue";
+
 export default {
   name: "Home",
   data() {
@@ -18,8 +18,7 @@ export default {
     };
   },
   components: {
-    kartica,
-    modal
+    kartica
   },
   async created() {
     this.fetchPosts();

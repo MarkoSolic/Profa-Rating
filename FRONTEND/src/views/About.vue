@@ -7,9 +7,11 @@
             OCIJENITE
             PROFESORA
           </div>
+
           <div class="col-sm-2"></div>
           <div class="col-sm-2"></div>
         </div>
+        <hr />
         <div class="row">
           <div class="col"></div>
           <div class="col-lg">
@@ -38,7 +40,7 @@
         </div>
 
         <div class="row">
-          <div class="col-lg">
+          <div class="col">
             <div class="card">
               <h1>O aplikaciji</h1>
               <p>
@@ -58,14 +60,19 @@
                 to možete postići klikom na gumb ispod.
               </p>
             </div>
-            <button class="btn btn-primary btn-lg" @click="show">Prijavi se</button>
+            <button
+              class="btn btn-primary btn-lg"
+              v-on:click="prikazPrijava= !prikazPrijava"
+            >Prijavi se</button>
           </div>
         </div>
 
-        <!--     <modal></modal> -->
+        <!--     -->
       </div>
       <div class="col right">
         <app-header />
+        <prijava v-show="!prikazPrijava"></prijava>
+        <registracija></registracija>
       </div>
     </div>
   </div>
@@ -74,23 +81,24 @@
 
 <script>
 import kartica from "@/components/kartica.vue";
-import modal from "@/components/modalPrijava.vue";
 import header from "@/components/header";
+import prijava from "./Prijava.vue";
+import registracija from "./Registracija.vue";
 
 export default {
+  data() {
+    return {
+      prikazPrijava: true,
+      zamjena: false
+    };
+  },
   components: {
     kartica,
-    modal,
-    "app-header": header
+    "app-header": header,
+    prijava,
+    registracija
   },
-  methods: {
-    show() {
-      this.$modal.show("prijava-modal");
-    },
-    hide() {
-      this.$modal.hide("prijava-modal");
-    }
-  }
+  methods: {}
 };
 </script>
 <style >
