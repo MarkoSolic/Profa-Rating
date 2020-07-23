@@ -7,7 +7,7 @@
       </h1>
     </div>
     <div class="alert alertCustom" role="alert" v-show="errorHandler.status">
-      <b>{{errorHandler.message}}</b>
+      {{errorHandler.message}}
     </div>
     <form @submit.prevent="login">
       <div class="row">
