@@ -62,7 +62,7 @@
 
               <button
                 class="btn btn-primary btn-lg"
-                v-on:click="prikaziPrijava = !prikaziPrijava"
+                v-on:click="prijavi_se = !prijavi_se"
               >Prijavi se</button>
             </div>
           </div>
@@ -73,10 +73,10 @@
         <app-header />
 
         <transition name="slide-fade">
-          <prijava v-show="!prikaziPrijava"></prijava>
+          <prijava v-show="prijavi_se"></prijava>
         </transition>
 
-        <registracija v-if="!prikaziRegistracija"></registracija>
+        <registracija v-if="!registriraj_se"></registracija>
       </div>
     </div>
   </div>
@@ -91,10 +91,7 @@ import store from "../store.js";
 
 export default {
   data() {
-    return {
-      prikaziPrijava: store.prijavi_se,
-      prikaziRegistracija: store.registriraj_se
-    };
+    return store
   },
   components: {
     kartica,

@@ -1,5 +1,5 @@
-<template>
-  <div id="login" class="container-fluid card-prijava">
+<template >
+  <div id="login" class="container-fluid card-prijava" >
     <div class="col-xs-12 .col-sm-12 .col-md-12 col-lg-12">
       <h1>
         Prijava
@@ -91,8 +91,11 @@ export default {
     },
     async login() {
       let success = await auth.login(this.email, this.lozinka);
-      if (success == true) {
+      if (success.status == true) {
         this.$router.push({ path: "popis" });
+      }
+      else{
+        console.log(success.message);
       }
     }
   },

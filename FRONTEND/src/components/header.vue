@@ -27,6 +27,8 @@
                 <a v-on:click="prikaziPrijava = !prikaziPrijava" class="dugme">| Prijava</a>
               </router-link>
             </button>
+            </div>
+            
           </div>
 
           <div v-if="auth.authenticated">
@@ -49,8 +51,8 @@ export default {
   data() {
     return {
       auth: auth.state,
-      prikaziPrijava: store.prijavi_se,
-      isActive: false
+      isActive: false,
+      prijaviSe: store.prijavi_se
     };
   },
 
