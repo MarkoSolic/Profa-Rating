@@ -49,6 +49,7 @@ export default {
     },
     openLogin() {
       this.$store.commit("showLogin");
+      console.log(this.$store.state.prijavi_se);
     },
     myFunction() {
       var x = document.getElementById("myTopnav");
