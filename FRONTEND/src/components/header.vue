@@ -15,8 +15,8 @@
         <span>| Popunjene forme</span>
       </a>
     </div>
-    <div v-if="!auth.authenticated" v-on:click="openLogin()">
-      <a class="button" href="/prijava">
+    <div v-if="!auth.authenticated" v-on:click="openLogin">
+      <a class="button">
         <span>| Prijava</span>
       </a>
     </div>
