@@ -82,14 +82,24 @@
                   <div
                     class="card-body col-xs-12 .col-sm-12 .col-md-12 col-lg-12"
                   >
-                    <h2>Email:</h2>
+                    <h2>
+                      Email:
+                      <p class="userData userDataEmail">
+                        <b>{{ userEmail }}</b>
+                      </p>
+                    </h2>
                   </div>
                 </div>
                 <div class="row">
                   <div
                     class="card-body col-xs-12 .col-sm-12 .col-md-12 col-lg-12"
                   >
-                    <h2>Fakultet:</h2>
+                    <h2>
+                      Fakultet:
+                      <p class="userData userDataFaks">
+                        <b>{{ userFaks }}</b>
+                      </p>
+                    </h2>
                   </div>
                 </div>
 
@@ -128,19 +138,6 @@
                   v-if="!prikaziEmail"
                   class="card-body col-xs-12 .col-sm-12 .col-md-12 col-lg-12"
                 >
-                  <div class="podnaslov">Trenutačan email</div>
-                  <div class="row">
-                    <div class="col-xs-3 .col-sm-3 .col-md-3 col-lg-3"></div>
-                    <div class="col-xs-6 .col-sm-6 .col-md-6 col-lg-6 promjena">
-                      <input
-                        type="text"
-                        name="lozinka"
-                        required
-                        class="form-control"
-                      />
-                    </div>
-                    <div class="col-xs-3 .col-sm-3 .col-md-3 col-lg-3"></div>
-                  </div>
                   <div class="podnaslov">Novi email</div>
                   <div class="row">
                     <div class="col-xs-3 .col-sm-3 .col-md-3 col-lg-3"></div>
@@ -241,28 +238,30 @@
 </template>
 
 <script>
-import kartica from "@/components/kartica.vue";
 import header from "@/components/header";
-import prijava from "./Prijava.vue";
-import registracija from "./Registracija.vue";
-import store from "../store.js";
 import { auth } from "@/services";
+import faks from "../faks.json";
 
 export default {
   data() {
     return {
-      prikaziPrijava: store.prikaziPrijava,
-      prikaziRegistracija: store.registriraj_se,
       auth: auth.state,
       prikaziEmail: true,
       prikaziLozinku: true,
+      userEmail: "",
+      userFaks: "",
     };
   },
   components: {
-    kartica,
     "app-header": header,
-    prijava,
-    registracija,
+  },
+  mounted() {
+    let data = auth.getUser();
+    this.userEmail = data.email;
+
+    let tempFaks = auth.getFaks();
+    tempFaks = faks.find((el) => el.short == tempFaks);
+    this.userFaks = tempFaks["long"];
   },
   methods: {
     idiHome() {
@@ -346,7 +345,16 @@ export default {
 .first-container {
   margin-bottom: 5%;
 }
-
+.userData {
+  color: #00b7ff;
+  overflow-wrap: break-word;
+}
+.userDataEmail {
+  font-size: 30px;
+}
+.userDataFaks {
+  font-size: 20px;
+}
 span {
   display: inline-block;
   position: relative;

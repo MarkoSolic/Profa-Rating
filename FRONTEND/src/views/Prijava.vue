@@ -69,7 +69,6 @@
 </template>
 
 <script>
-import store from "../store.js";
 import modal from "./Registracija.vue";
 import { auth } from "@/services";
 import regeneratorRuntime from "regenerator-runtime";
@@ -78,7 +77,6 @@ export default {
   name: "Prijava",
   data() {
     return {
-      prikaziRegistracija: store.registriraj_se,
       lozinka: "",
       email: "",
       errorHandler:{

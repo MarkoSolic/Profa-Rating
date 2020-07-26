@@ -62,7 +62,7 @@
 
               <button
                 class="btn btn-primary btn-lg"
-                v-on:click="prijavi_se = !prijavi_se"
+                v-on:click='openLogin()'
               >Prijavi se</button>
             </div>
           </div>
@@ -91,13 +91,18 @@ import store from "../store.js";
 
 export default {
   data() {
-    return store
+    return store.state
   },
   components: {
     kartica,
     "app-header": header,
     prijava,
     registracija
+  },
+  methods:{
+    openLogin(){
+      this.$store.commit('prijava')
+    }
   }
 };
 </script>

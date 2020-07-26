@@ -34,7 +34,6 @@
 </template>
 <script>
 import { auth } from "@/services";
-import store from "../store.js";
 
 export default {
   data() {
@@ -50,7 +49,6 @@ export default {
     },
     openLogin() {
       this.$store.commit("showLogin");
-      console.log(this.$store.state.prijavi_se);
     },
     myFunction() {
       var x = document.getElementById("myTopnav");

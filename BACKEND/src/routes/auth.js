@@ -4,8 +4,65 @@ import jwt from 'jsonwebtoken'
 
 import connect from '../db'
 import { registerValidation, loginValidation } from '../validation'
+import verify from '../protectedRoutes'
 
 const router = express.Router()
+
+router.patch('/password', verify, async (req, res) => {
+    let db = await connect()
+    let newPassword = req.body.new_password
+    let oldPassword = req.body.old_password
+    let email = req.jwt.email
+
+    let user = await db.collection('users').findOne({ email: email})
+
+    if(newPassword && oldPassword && user && (await bcrypt.compare(oldPassword, user.password))){
+        let new_password_hash = await bcrypt.hash(newPassword, 10)
+
+        try {
+            await db.collection('users').updateOne(
+                {_id: user._id},
+                {
+                    $set: { password: new_password_hash }
+                }
+                )
+            res.status(200).send('Update successful.')
+        } catch (error) {
+            res.status(500).send(error)
+        }
+    }
+    else{
+        res.status(400).send('Ne dostaje stara ili nova lozinka.')
+    }
+
+})
+
+router.patch('/email', verify, async (req, res) => {
+    let db = await connect()
+    let newEmail = req.body.email
+    let email = req.jwt.email
+
+    let user = await db.collection('users').findOne({ email: email})
+
+    if(user && newEmail){
+
+        try {
+            await db.collection('users').updateOne(
+                {_id: user._id},
+                {
+                    $set: { email: newEmail }
+                }
+                )
+            res.status(200).send('New email updated.')
+        } catch (error) {
+            res.status(500).send(error)
+        }
+    }
+    else{
+        res.status(400).send('Ne dostaje novi email')
+    }
+
+})
 
 router.post('/register', async (req, res) => {
 
