@@ -60,10 +60,7 @@
                 prvo prijaviti, to možete postići klikom na gumb ispod.
               </p>
 
-              <button
-                class="btn btn-primary btn-lg"
-                v-on:click='openLogin()'
-              >Prijavi se</button>
+              <button class="btn btn-primary btn-lg" v-on:click="openLogin()">Prijavi se</button>
             </div>
           </div>
         </div>
@@ -91,19 +88,19 @@ import store from "../store.js";
 
 export default {
   data() {
-    return store.state
+    return store.state;
   },
   components: {
     kartica,
     "app-header": header,
     prijava,
-    registracija
+    registracija,
   },
-  methods:{
-    openLogin(){
-      this.$store.commit('prijava')
-    }
-  }
+  methods: {
+    openLogin() {
+      this.$store.commit("prijava");
+    },
+  },
 };
 </script>
 
@@ -122,6 +119,8 @@ export default {
   border-radius: 15px;
   background-image: url("../assets/card-pozadina.svg");
 }
+
+
 
 .title {
   font-family: "Playfair Display", serif;

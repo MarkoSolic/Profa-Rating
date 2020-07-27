@@ -48,9 +48,9 @@ export default {
       this.$router.go();
     },
     openLogin() {
-      this.$store.commit("showLogin");
-      console.log(this.$store.state.prijavi_se);
+      this.$store.commit("prijava");
     },
+
     myFunction() {
       var x = document.getElementById("myTopnav");
       if (x.className === "topnav") {
@@ -119,14 +119,9 @@ export default {
   font-size: 14px;
 }
 
-/* .topnav a:hover {
-  border-radius: 5px;
-  backdrop-filter: blur(15px);
-  color: white;
-}
 .topnav .odjava:hover {
   color: rgb(219, 6, 6);
-} */
+}
 
 .topnav .icon {
   display: none;
