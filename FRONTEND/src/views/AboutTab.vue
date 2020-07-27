@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid p-0" id="about">
-    <div class="row">
+    <div class="row flex-column-reverse flex-md-row">
       <div class="col-xs-6 .col-sm-6 .col-md-6 col-lg-6 left">
         <div class="row">
           <div class="col-xs-12 .col-sm-12 .col-md-12 col-lg-12 left title">
@@ -476,9 +476,6 @@ span:after {
 }
 
 @media (max-width: 375px) {
-
-
-
   .btn {
     padding: 5%;
     margin-bottom: 10px;
