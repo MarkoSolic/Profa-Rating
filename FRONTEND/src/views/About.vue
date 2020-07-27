@@ -120,8 +120,6 @@ export default {
   background-image: url("../assets/card-pozadina.svg");
 }
 
-
-
 .title {
   font-family: "Playfair Display", serif;
   font-size: 25px;
