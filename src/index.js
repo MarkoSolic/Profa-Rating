@@ -8,7 +8,7 @@ import predavaci from "./routes/predavaci";
 import forma from "./routes/forma";
 
 const app = express();
-const port = "https://profa-rating-backend.herokuapp.com";
+const port = process.env.PORT || 3000;
 
 dotenv.config();
 
