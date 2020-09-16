@@ -2,7 +2,7 @@ import axios from "axios";
 import router from "@/router";
 
 let Services = axios.create({
-  baseURL: "https://still-castle-86560.herokuapp.com/",
+  baseURL: "http://localhost:3000/",
   timeout: 10000,
 });
 
