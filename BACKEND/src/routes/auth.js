@@ -40,7 +40,7 @@ router.patch("/password", verify, async (req, res) => {
     res.status(400).send("Kriva stara lozinka");
   }
 });
-router.post("/", async (req, res) => {
+router.post("/register", async (req, res) => {
   const db = await connect();
 
   //provjerava da li je data ispravan prije nego sto se salje u bazu
