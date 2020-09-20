@@ -64,7 +64,7 @@ const auth = {
       email: email,
       password: password,
     });
-    console.log(response);
+
     let data = await response.data;
     let status = response.status;
 

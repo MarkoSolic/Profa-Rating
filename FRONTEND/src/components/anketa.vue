@@ -14,7 +14,7 @@
               id="option1"
               name="question1"
               value="1"
-              v-model="forma.prvo"
+              v-model="forma[0]"
             />
             <label class="checkboxtext" for="option1">0-20%</label>
           </div>
@@ -25,7 +25,7 @@
               id="option1"
               name="question1"
               value="2"
-              v-model="forma.prvo"
+              v-model="forma[0]"
             />
             <label class="checkboxtext" for="2">20-40%</label>
           </div>
@@ -36,9 +36,10 @@
               id="option1"
               name="question1"
               value="3"
-              v-model="forma.prvo"
+              v-model="forma[0]"
             />
             <label class="checkboxtext" for="3">40-60%</label>
+
           </div>
           <div class="form-group">
             <input
@@ -47,7 +48,7 @@
               id="option1"
               name="question1"
               value="4"
-              v-model="forma.prvo"
+              v-model="forma[0]"
             />
             <label class="checkboxtext" for="4">60-80%</label>
           </div>
@@ -58,7 +59,7 @@
               id="option1"
               name="question1"
               value="5"
-              v-model="forma.prvo"
+              v-model="forma[0]"
             />
             <label class="checkboxtext" for="5">80-100%</label>
           </div>
@@ -77,7 +78,7 @@
               id="option1"
               name="question2"
               value="2"
-              v-model="forma.drugo"
+              v-model="forma[1]"
             />
             <label class="checkboxtext" for="2">2</label>
           </div>
@@ -88,7 +89,7 @@
               id="option1"
               name="question2"
               value="3"
-              v-model="forma.drugo"
+              v-model="forma[1]"
             />
             <label class="checkboxtext" for="3">3</label>
           </div>
@@ -99,7 +100,7 @@
               id="option1"
               name="question2"
               value="4"
-              v-model="forma.drugo"
+              v-model="forma[1]"
             />
             <label class="checkboxtext" for="4">4</label>
           </div>
@@ -110,7 +111,7 @@
               id="option1"
               name="question2"
               value="5"
-              v-model="forma.drugo"
+              v-model="forma[1]"
             />
             <label class="checkboxtext" for="5">5</label>
           </div>
@@ -130,7 +131,7 @@
               id="option1"
               name="question3"
               value="1"
-              v-model="forma.trece"
+              v-model="forma[2]"
             />
             <label class="checkboxtext" for="option1">1</label>
           </div>
@@ -141,7 +142,7 @@
               id="option2"
               name="question3"
               value="2"
-              v-model="forma.trece"
+              v-model="forma[2]"
             />
             <label class="checkboxtext" for="2">2</label>
           </div>
@@ -152,7 +153,7 @@
               id="option3"
               name="question3"
               value="3"
-              v-model="forma.trece"
+              v-model="forma[2]"
             />
             <label class="checkboxtext" for="3">3</label>
           </div>
@@ -163,7 +164,7 @@
               id="option4"
               name="question3"
               value="4"
-              v-model="forma.trece"
+              v-model="forma[2]"
             />
             <label class="checkboxtext" for="4">4</label>
           </div>
@@ -174,7 +175,7 @@
               id="option5"
               name="question3"
               value="5"
-              v-model="forma.trece"
+              v-model="forma[2]"
             />
             <label class="checkboxtext" for="5">5</label>
           </div>
@@ -194,7 +195,7 @@
               id="option1"
               name="question4"
               value="1"
-              v-model="forma.cetvrto"
+              v-model="forma[3]"
             />
             <label class="checkboxtext" for="option1">1</label>
           </div>
@@ -205,7 +206,7 @@
               id="option2"
               name="question4"
               value="2"
-              v-model="forma.cetvrto"
+              v-model="forma[3]"
             />
             <label class="checkboxtext" for="2">2</label>
           </div>
@@ -216,7 +217,7 @@
               id="option3"
               name="question4"
               value="3"
-              v-model="forma.cetvrto"
+              v-model="forma[3]"
             />
             <label class="checkboxtext" for="3">3</label>
           </div>
@@ -227,7 +228,7 @@
               id="option4"
               name="question4"
               value="4"
-              v-model="forma.cetvrto"
+              v-model="forma[3]"
             />
             <label class="checkboxtext" for="4">4</label>
           </div>
@@ -238,7 +239,7 @@
               id="option5"
               name="question4"
               value="5"
-              v-model="forma.cetvrto"
+              v-model="forma[3]"
             />
             <label class="checkboxtext" for="5">5</label>
           </div>
@@ -258,7 +259,7 @@
               id="option1"
               name="question5"
               value="1"
-              v-model="forma.peto"
+              v-model="forma[4]"
             />
             <label class="checkboxtext" for="option1">1</label>
           </div>
@@ -269,7 +270,7 @@
               id="option2"
               name="question5"
               value="2"
-              v-model="forma.peto"
+              v-model="forma[4]"
             />
             <label class="checkboxtext" for="2">2</label>
           </div>
@@ -280,7 +281,7 @@
               id="option3"
               name="question5"
               value="3"
-              v-model="forma.peto"
+              v-model="forma[4]"
             />
             <label class="checkboxtext" for="3">3</label>
           </div>
@@ -291,7 +292,7 @@
               id="option4"
               name="question5"
               value="3"
-              v-model="forma.peto"
+              v-model="forma[4]"
             />
             <label class="checkboxtext" for="4">4</label>
           </div>
@@ -302,7 +303,7 @@
               id="option5"
               name="question5"
               value="5"
-              v-model="forma.peto"
+              v-model="forma[4]"
             />
             <label class="checkboxtext" for="5">5</label>
           </div>
@@ -321,7 +322,7 @@
               id="option1"
               name="question6"
               value="1"
-              v-model="forma.sesto"
+              v-model="forma[5]"
             />
             <label class="checkboxtext" for="option1">prevelika</label>
           </div>
@@ -332,7 +333,7 @@
               id="option2"
               name="question6"
               value="2"
-              v-model="forma.sesto"
+              v-model="forma[5]"
             />
             <label class="checkboxtext" for="2">primjerena</label>
           </div>
@@ -343,7 +344,7 @@
               id="option3"
               name="question6"
               value="3"
-              v-model="forma.sesto"
+              v-model="forma[5]"
             />
             <label class="checkboxtext" for="3">premala</label>
           </div>
@@ -363,7 +364,7 @@
               id="option1"
               name="question7"
               value="1"
-              v-model="forma.sedmo"
+              v-model="forma[6]"
             />
             <label class="checkboxtext" for="option1">1</label>
           </div>
@@ -374,7 +375,7 @@
               id="option2"
               name="question7"
               value="2"
-              v-model="forma.sedmo"
+              v-model="forma[6]"
             />
             <label class="checkboxtext" for="2">2</label>
           </div>
@@ -385,7 +386,7 @@
               id="option3"
               name="question7"
               value="3"
-              v-model="forma.sedmo"
+              v-model="forma[6]"
             />
             <label class="checkboxtext" for="3">3</label>
           </div>
@@ -396,7 +397,7 @@
               id="option4"
               name="question7"
               value="3"
-              v-model="forma.sedmo"
+              v-model="forma[6]"
             />
             <label class="checkboxtext" for="4">4</label>
           </div>
@@ -407,7 +408,7 @@
               id="option5"
               name="question7"
               value="5"
-              v-model="forma.sedmo"
+              v-model="forma[6]"
             />
             <label class="checkboxtext" for="5">5</label>
           </div>
@@ -427,7 +428,7 @@
               id="option1"
               name="question8"
               value="1"
-              v-model="forma.osmo"
+              v-model="forma[7]"
             />
             <label class="checkboxtext" for="option1">1</label>
           </div>
@@ -438,7 +439,7 @@
               id="option2"
               name="question8"
               value="2"
-              v-model="forma.osmo"
+              v-model="forma[7]"
             />
             <label class="checkboxtext" for="2">2</label>
           </div>
@@ -449,7 +450,7 @@
               id="option3"
               name="question8"
               value="3"
-              v-model="forma.osmo"
+              v-model="forma[7]"
             />
             <label class="checkboxtext" for="3">3</label>
           </div>
@@ -460,7 +461,7 @@
               id="option4"
               name="question8"
               value="3"
-              v-model="forma.osmo"
+              v-model="forma[7]"
             />
             <label class="checkboxtext" for="4">4</label>
           </div>
@@ -471,7 +472,7 @@
               id="option5"
               name="question8"
               value="5"
-              v-model="forma.osmo"
+              v-model="forma[7]"
             />
             <label class="checkboxtext" for="5">5</label>
           </div>
@@ -491,7 +492,7 @@
               id="option1"
               name="question9"
               value="1"
-              v-model="forma.deveto"
+              v-model="forma[8]"
             />
             <label class="checkboxtext" for="option1">1</label>
           </div>
@@ -502,7 +503,7 @@
               id="option2"
               name="question9"
               value="2"
-              v-model="forma.deveto"
+              v-model="forma[8]"
             />
             <label class="checkboxtext" for="2">2</label>
           </div>
@@ -513,7 +514,7 @@
               id="option3"
               name="question9"
               value="3"
-              v-model="forma.deveto"
+              v-model="forma[8]"
             />
             <label class="checkboxtext" for="3">3</label>
           </div>
@@ -524,7 +525,7 @@
               id="option4"
               name="question9"
               value="3"
-              v-model="forma.deveto"
+              v-model="forma[8]"
             />
             <label class="checkboxtext" for="4">4</label>
           </div>
@@ -535,7 +536,7 @@
               id="option5"
               name="question9"
               value="5"
-              v-model="forma.deveto"
+              v-model="forma[8]"
             />
             <label class="checkboxtext" for="5">5</label>
           </div>
@@ -555,7 +556,7 @@
               id="option1"
               name="question10"
               value="1"
-              v-model="forma.deseto"
+              v-model="forma[9]"
             />
             <label class="checkboxtext" for="option1">1</label>
           </div>
@@ -566,7 +567,7 @@
               id="option2"
               name="question10"
               value="2"
-              v-model="forma.deseto"
+              v-model="forma[9]"
             />
             <label class="checkboxtext" for="2">2</label>
           </div>
@@ -577,7 +578,7 @@
               id="option3"
               name="question10"
               value="3"
-              v-model="forma.deseto"
+              v-model="forma[9]"
             />
             <label class="checkboxtext" for="3">3</label>
           </div>
@@ -588,7 +589,7 @@
               id="option4"
               name="question10"
               value="3"
-              v-model="forma.deseto"
+              v-model="forma[9]"
             />
             <label class="checkboxtext" for="4">4</label>
           </div>
@@ -599,7 +600,7 @@
               id="option5"
               name="question10"
               value="5"
-              v-model="forma.deseto"
+              v-model="forma[9]"
             />
             <label class="checkboxtext" for="5">5</label>
           </div>
@@ -619,7 +620,7 @@
               id="option1"
               name="question11"
               value="1"
-              v-model="forma.jedanaesto"
+              v-model="forma[10]"
             />
             <label class="checkboxtext" for="option1">1</label>
           </div>
@@ -630,7 +631,7 @@
               id="option2"
               name="question11"
               value="2"
-              v-model="forma.jedanaesto"
+              v-model="forma[10]"
             />
             <label class="checkboxtext" for="2">2</label>
           </div>
@@ -641,7 +642,7 @@
               id="option3"
               name="question11"
               value="3"
-              v-model="forma.jedanaesto"
+              v-model="forma[10]"
             />
             <label class="checkboxtext" for="3">3</label>
           </div>
@@ -652,7 +653,7 @@
               id="option4"
               name="question11"
               value="3"
-              v-model="forma.jedanaesto"
+              v-model="forma[10]"
             />
             <label class="checkboxtext" for="4">4</label>
           </div>
@@ -663,7 +664,7 @@
               id="option5"
               name="question11"
               value="5"
-              v-model="forma.jedanaesto"
+              v-model="forma[10]"
             />
             <label class="checkboxtext" for="5">5</label>
           </div>
@@ -683,7 +684,7 @@
               id="option1"
               name="question12"
               value="1"
-              v-model="forma.dvanaesto"
+              v-model="forma[11]"
             />
             <label class="checkboxtext" for="option1">1</label>
           </div>
@@ -694,7 +695,7 @@
               id="option2"
               name="question12"
               value="2"
-              v-model="forma.dvanaesto"
+              v-model="forma[11]"
             />
             <label class="checkboxtext" for="2">2</label>
           </div>
@@ -705,7 +706,7 @@
               id="option3"
               name="question12"
               value="3"
-              v-model="forma.dvanaesto"
+              v-model="forma[11]"
             />
             <label class="checkboxtext" for="3">3</label>
           </div>
@@ -716,7 +717,7 @@
               id="option4"
               name="question12"
               value="3"
-              v-model="forma.dvanaesto"
+              v-model="forma[11]"
             />
             <label class="checkboxtext" for="4">4</label>
           </div>
@@ -727,7 +728,7 @@
               id="option5"
               name="question12"
               value="5"
-              v-model="forma.dvanaesto"
+              v-model="forma[11]"
             />
             <label class="checkboxtext" for="5">5</label>
           </div>
@@ -747,7 +748,7 @@
               id="option1"
               name="question13"
               value="1"
-              v-model="forma.trinaesto"
+              v-model="forma[12]"
             />
             <label class="checkboxtext" for="option1">1</label>
           </div>
@@ -758,7 +759,7 @@
               id="option2"
               name="question13"
               value="2"
-              v-model="forma.trinaesto"
+              v-model="forma[12]"
             />
             <label class="checkboxtext" for="2">2</label>
           </div>
@@ -769,7 +770,7 @@
               id="option3"
               name="question13"
               value="3"
-              v-model="forma.trinaesto"
+              v-model="forma[12]"
             />
             <label class="checkboxtext" for="3">3</label>
           </div>
@@ -780,7 +781,7 @@
               id="option4"
               name="question13"
               value="3"
-              v-model="forma.trinaesto"
+              v-model="forma[12]"
             />
             <label class="checkboxtext" for="4">4</label>
           </div>
@@ -791,7 +792,7 @@
               id="option5"
               name="question13"
               value="5"
-              v-model="forma.trinaesto"
+              v-model="forma[12]"
             />
             <label class="checkboxtext" for="5">5</label>
           </div>
@@ -803,7 +804,7 @@
               id="option6"
               name="question13"
               value="6"
-              v-model="forma.trinaesto"
+              v-model="forma[12]"
             />
             <label class="checkboxtext" for="6">ne znam (ne mogu procijeniti)</label>
           </div>
@@ -829,7 +830,7 @@
                 id="option1"
                 name="question14"
                 value="1"
-                v-model="forma.cetrnaesto"
+                v-model="forma[13]"
               />
               <label class="checkboxtext" for="option1">1</label>
             </div>
@@ -840,7 +841,7 @@
                 id="option2"
                 name="question14"
                 value="2"
-                v-model="forma.cetrnaesto"
+                v-model="forma[13]"
               />
               <label class="checkboxtext" for="2">2</label>
             </div>
@@ -851,7 +852,7 @@
                 id="option3"
                 name="question14"
                 value="3"
-                v-model="forma.cetrnaesto"
+                v-model="forma[13]"
               />
               <label class="checkboxtext" for="3">3</label>
             </div>
@@ -862,7 +863,7 @@
                 id="option4"
                 name="question14"
                 value="3"
-                v-model="forma.cetrnaesto"
+                v-model="forma[13]"
               />
               <label class="checkboxtext" for="4">4</label>
             </div>
@@ -873,7 +874,7 @@
                 id="option5"
                 name="question14"
                 value="5"
-                v-model="forma.cetrnaesto"
+                v-model="forma[13]"
               />
               <label class="checkboxtext" for="5">5</label>
             </div>
@@ -897,7 +898,7 @@
                 id="option1"
                 name="question15"
                 value="1"
-                v-model="forma.petnaesto"
+                v-model="forma[14]"
               />
               <label class="checkboxtext" for="option1">1</label>
             </div>
@@ -908,7 +909,7 @@
                 id="option2"
                 name="question15"
                 value="2"
-                v-model="forma.petnaesto"
+                v-model="forma[14]"
               />
               <label class="checkboxtext" for="2">2</label>
             </div>
@@ -919,7 +920,7 @@
                 id="option3"
                 name="question15"
                 value="3"
-                v-model="forma.petnaesto"
+                v-model="forma[14]"
               />
               <label class="checkboxtext" for="3">3</label>
             </div>
@@ -930,7 +931,7 @@
                 id="option4"
                 name="question15"
                 value="3"
-                v-model="forma.petnaesto"
+                v-model="forma[14]"
               />
               <label class="checkboxtext" for="4">4</label>
             </div>
@@ -941,7 +942,7 @@
                 id="option5"
                 name="question15"
                 value="5"
-                v-model="forma.petnaesto"
+                v-model="forma[14]"
               />
               <label class="checkboxtext" for="5">5</label>
             </div>
@@ -953,7 +954,7 @@
                 id="option6"
                 name="question15"
                 value="6"
-                v-model="forma.petnaesto"
+                v-model="forma[14]"
               />
               <label class="checkboxtext" for="6">ne znam (ne mogu procijeniti)</label>
             </div>
@@ -972,7 +973,7 @@
                 id="option1"
                 name="question16"
                 value="1"
-                v-model="forma.sesnaesto"
+                v-model="forma[15]"
               />
               <label class="checkboxtext" for="option1">1</label>
             </div>
@@ -983,7 +984,7 @@
                 id="option2"
                 name="question16"
                 value="2"
-                v-model="forma.sesnaesto"
+                v-model="forma[15]"
               />
               <label class="checkboxtext" for="2">2</label>
             </div>
@@ -994,7 +995,7 @@
                 id="option3"
                 name="question16"
                 value="3"
-                v-model="forma.sesnaesto"
+                v-model="forma[15]"
               />
               <label class="checkboxtext" for="3">3</label>
             </div>
@@ -1005,7 +1006,7 @@
                 id="option4"
                 name="question16"
                 value="3"
-                v-model="forma.sesnaesto"
+                v-model="forma[15]"
               />
               <label class="checkboxtext" for="4">4</label>
             </div>
@@ -1016,7 +1017,7 @@
                 id="option5"
                 name="question16"
                 value="5"
-                v-model="forma.sesnaesto"
+                v-model="forma[15]"
               />
               <label class="checkboxtext" for="5">5</label>
             </div>
@@ -1028,7 +1029,7 @@
                 id="option6"
                 name="question16"
                 value="6"
-                v-model="forma.sesnaesto"
+                v-model="forma[15]"
               />
               <label class="checkboxtext" for="6">ne znam (ne mogu procijeniti)</label>
             </div>
@@ -1047,7 +1048,7 @@
                 id="option1"
                 name="question17"
                 value="1"
-                v-model="forma.sedamnaesto"
+                v-model="forma[16]"
               />
               <label class="checkboxtext" for="option1">1</label>
             </div>
@@ -1058,7 +1059,7 @@
                 id="option2"
                 name="question17"
                 value="2"
-                v-model="forma.sedamnaesto"
+                v-model="forma[16]"
               />
               <label class="checkboxtext" for="2">2</label>
             </div>
@@ -1069,7 +1070,7 @@
                 id="option3"
                 name="question17"
                 value="3"
-                v-model="forma.sedamnaesto"
+                v-model="forma[16]"
               />
               <label class="checkboxtext" for="3">3</label>
             </div>
@@ -1080,7 +1081,7 @@
                 id="option4"
                 name="question17"
                 value="3"
-                v-model="forma.sedamnaesto"
+                v-model="forma[16]"
               />
               <label class="checkboxtext" for="4">4</label>
             </div>
@@ -1091,7 +1092,7 @@
                 id="option5"
                 name="question17"
                 value="5"
-                v-model="forma.sedamnaesto"
+                v-model="forma[16]"
               />
               <label class="checkboxtext" for="5">5</label>
             </div>
@@ -1103,7 +1104,7 @@
                 id="option6"
                 name="question17"
                 value="6"
-                v-model="forma.sedamnaesto"
+                v-model="forma[16]"
               />
               <label class="checkboxtext" for="6">ne znam (ne mogu procijeniti)</label>
             </div>
@@ -1122,7 +1123,7 @@
                 id="option1"
                 name="question18"
                 value="1"
-                v-model="forma.osamnaesto"
+                v-model="forma[17]"
               />
               <label class="checkboxtext" for="option1">1</label>
             </div>
@@ -1133,7 +1134,7 @@
                 id="option2"
                 name="question18"
                 value="2"
-                v-model="forma.osamnaesto"
+                v-model="forma[17]"
               />
               <label class="checkboxtext" for="2">2</label>
             </div>
@@ -1144,7 +1145,7 @@
                 id="option3"
                 name="question18"
                 value="3"
-                v-model="forma.osamnaesto"
+                v-model="forma[17]"
               />
               <label class="checkboxtext" for="3">3</label>
             </div>
@@ -1155,7 +1156,7 @@
                 id="option4"
                 name="question18"
                 value="3"
-                v-model="forma.osamnaesto"
+                v-model="forma[17]"
               />
               <label class="checkboxtext" for="4">4</label>
             </div>
@@ -1166,7 +1167,7 @@
                 id="option5"
                 name="question18"
                 value="5"
-                v-model="forma.osamnaesto"
+                v-model="forma[17]"
               />
               <label class="checkboxtext" for="5">5</label>
             </div>
@@ -1178,7 +1179,7 @@
                 id="option6"
                 name="question18"
                 value="6"
-                v-model="forma.osamnaesto"
+                v-model="forma[17]"
               />
               <label class="checkboxtext" for="6">ne znam (ne mogu procijeniti)</label>
             </div>
@@ -1197,7 +1198,7 @@
                 id="option1"
                 name="question19"
                 value="1"
-                v-model="forma.devetnaesto"
+                v-model="forma[18]"
               />
               <label class="checkboxtext" for="option1">1</label>
             </div>
@@ -1208,7 +1209,7 @@
                 id="option2"
                 name="question19"
                 value="2"
-                v-model="forma.devetnaesto"
+                v-model="forma[18]"
               />
               <label class="checkboxtext" for="2">2</label>
             </div>
@@ -1219,7 +1220,7 @@
                 id="option3"
                 name="question19"
                 value="3"
-                v-model="forma.devetnaesto"
+                v-model="forma[18]"
               />
               <label class="checkboxtext" for="3">3</label>
             </div>
@@ -1230,7 +1231,7 @@
                 id="option4"
                 name="question19"
                 value="3"
-                v-model="forma.devetnaesto"
+                v-model="forma[18]"
               />
               <label class="checkboxtext" for="4">4</label>
             </div>
@@ -1241,7 +1242,7 @@
                 id="option5"
                 name="question19"
                 value="5"
-                v-model="forma.devetnaesto"
+                v-model="forma[18]"
               />
               <label class="checkboxtext" for="5">5</label>
             </div>
@@ -1253,7 +1254,7 @@
                 id="option6"
                 name="question19"
                 value="6"
-                v-model="forma.devetnaesto"
+                v-model="forma[18]"
               />
               <label class="checkboxtext" for="6">ne znam (ne mogu procijeniti)</label>
             </div>
@@ -1272,7 +1273,7 @@
                 id="option1"
                 name="question20"
                 value="1"
-                v-model="forma.dvadeseto"
+                v-model="forma[19]"
               />
               <label class="checkboxtext" for="option1">1</label>
             </div>
@@ -1283,7 +1284,7 @@
                 id="option2"
                 name="question20"
                 value="2"
-                v-model="forma.dvadeseto"
+                v-model="forma[19]"
               />
               <label class="checkboxtext" for="2">2</label>
             </div>
@@ -1294,7 +1295,7 @@
                 id="option3"
                 name="question20"
                 value="3"
-                v-model="forma.dvadeseto"
+                v-model="forma[19]"
               />
               <label class="checkboxtext" for="3">3</label>
             </div>
@@ -1305,7 +1306,7 @@
                 id="option4"
                 name="question20"
                 value="3"
-                v-model="forma.dvadeseto"
+                v-model="forma[19]"
               />
               <label class="checkboxtext" for="4">4</label>
             </div>
@@ -1316,7 +1317,7 @@
                 id="option5"
                 name="question20"
                 value="5"
-                v-model="forma.dvadeseto"
+                v-model="forma[19]"
               />
               <label class="checkboxtext" for="5">5</label>
             </div>
@@ -1328,7 +1329,7 @@
                 id="option6"
                 name="question20"
                 value="6"
-                v-model="forma.dvadeseto"
+                v-model="forma[19]"
               />
               <label class="checkboxtext" for="6">ne znam (ne mogu procijeniti)</label>
             </div>
@@ -1347,7 +1348,7 @@
                 id="option1"
                 name="question21"
                 value="1"
-                v-model="forma.dvadesetPrvo"
+                v-model="forma[20]"
               />
               <label class="checkboxtext" for="option1">1</label>
             </div>
@@ -1358,7 +1359,7 @@
                 id="option2"
                 name="question21"
                 value="2"
-                v-model="forma.dvadesetPrvo"
+                v-model="forma[20]"
               />
               <label class="checkboxtext" for="2">2</label>
             </div>
@@ -1369,7 +1370,7 @@
                 id="option3"
                 name="question21"
                 value="3"
-                v-model="forma.dvadesetPrvo"
+                v-model="forma[20]"
               />
               <label class="checkboxtext" for="3">3</label>
             </div>
@@ -1380,7 +1381,7 @@
                 id="option4"
                 name="question21"
                 value="3"
-                v-model="forma.dvadesetPrvo"
+                v-model="forma[20]"
               />
               <label class="checkboxtext" for="4">4</label>
             </div>
@@ -1391,7 +1392,7 @@
                 id="option5"
                 name="question21"
                 value="5"
-                v-model="forma.dvadesetPrvo"
+                v-model="forma[20]"
               />
               <label class="checkboxtext" for="5">5</label>
             </div>
@@ -1403,7 +1404,7 @@
                 id="option6"
                 name="question21"
                 value="6"
-                v-model="forma.dvadesetPrvo"
+                v-model="forma[20]"
               />
               <label class="checkboxtext" for="6">ne znam (ne mogu procijeniti)</label>
             </div>
@@ -1422,7 +1423,7 @@
                 id="option1"
                 name="question22"
                 value="1"
-                v-model="forma.dvadesetDrugo"
+                v-model="forma[21]"
               />
               <label class="checkboxtext" for="option1">1</label>
             </div>
@@ -1433,7 +1434,7 @@
                 id="option2"
                 name="question22"
                 value="2"
-                v-model="forma.dvadesetDrugo"
+                v-model="forma[21]"
               />
               <label class="checkboxtext" for="2">2</label>
             </div>
@@ -1444,7 +1445,7 @@
                 id="option3"
                 name="question22"
                 value="3"
-                v-model="forma.dvadesetDrugo"
+                v-model="forma[21]"
               />
               <label class="checkboxtext" for="3">3</label>
             </div>
@@ -1455,7 +1456,7 @@
                 id="option4"
                 name="question22"
                 value="3"
-                v-model="forma.dvadesetDrugo"
+                v-model="forma[21]"
               />
               <label class="checkboxtext" for="4">4</label>
             </div>
@@ -1466,7 +1467,7 @@
                 id="option5"
                 name="question22"
                 value="5"
-                v-model="forma.dvadesetDrugo"
+                v-model="forma[21]"
               />
               <label class="checkboxtext" for="5">5</label>
             </div>
@@ -1478,7 +1479,7 @@
                 id="option6"
                 name="question22"
                 value="6"
-                v-model="forma.dvadesetDrugo"
+                v-model="forma[21]"
               />
               <label class="checkboxtext" for="6">ne znam (ne mogu procijeniti)</label>
             </div>
@@ -1497,7 +1498,7 @@
                 id="option1"
                 name="question23"
                 value="1"
-                v-model="forma.dvadesetTrece"
+                v-model="forma[22]"
               />
               <label class="checkboxtext" for="option1">1</label>
             </div>
@@ -1508,7 +1509,7 @@
                 id="option2"
                 name="question23"
                 value="2"
-                v-model="forma.dvadesetTrece"
+                v-model="forma[22]"
               />
               <label class="checkboxtext" for="2">2</label>
             </div>
@@ -1519,7 +1520,7 @@
                 id="option3"
                 name="question23"
                 value="3"
-                v-model="forma.dvadesetTrece"
+                v-model="forma[22]"
               />
               <label class="checkboxtext" for="3">3</label>
             </div>
@@ -1530,7 +1531,7 @@
                 id="option4"
                 name="question23"
                 value="3"
-                v-model="forma.dvadesetTrece"
+                v-model="forma[22]"
               />
               <label class="checkboxtext" for="4">4</label>
             </div>
@@ -1541,7 +1542,7 @@
                 id="option5"
                 name="question23"
                 value="5"
-                v-model="forma.dvadesetTrece"
+                v-model="forma[22]"
               />
               <label class="checkboxtext" for="5">5</label>
             </div>
@@ -1553,7 +1554,7 @@
                 id="option6"
                 name="question23"
                 value="6"
-                v-model="forma.dvadesetTrece"
+                v-model="forma[22]"
               />
               <label class="checkboxtext" for="6">ne znam (ne mogu procijeniti)</label>
             </div>
@@ -1572,7 +1573,7 @@
                 id="option1"
                 name="question24"
                 value="1"
-                v-model="forma.dvadesetCetvrto"
+                v-model="forma[23]"
               />
               <label class="checkboxtext" for="option1">1</label>
             </div>
@@ -1583,7 +1584,7 @@
                 id="option2"
                 name="question24"
                 value="2"
-                v-model="forma.dvadesetCetvrto"
+                v-model="forma[23]"
               />
               <label class="checkboxtext" for="2">2</label>
             </div>
@@ -1594,7 +1595,7 @@
                 id="option3"
                 name="question24"
                 value="3"
-                v-model="forma.dvadesetCetvrto"
+                v-model="forma[23]"
               />
               <label class="checkboxtext" for="3">3</label>
             </div>
@@ -1605,7 +1606,7 @@
                 id="option4"
                 name="question24"
                 value="3"
-                v-model="forma.dvadesetCetvrto"
+                v-model="forma[23]"
               />
               <label class="checkboxtext" for="4">4</label>
             </div>
@@ -1616,7 +1617,7 @@
                 id="option5"
                 name="question24"
                 value="5"
-                v-model="forma.dvadesetCetvrto"
+                v-model="forma[23]"
               />
               <label class="checkboxtext" for="5">5</label>
             </div>
@@ -1628,7 +1629,7 @@
                 id="option6"
                 name="question24"
                 value="6"
-                v-model="forma.dvadesetCetvrto"
+                v-model="forma[23]"
               />
               <label class="checkboxtext" for="6">ne znam (ne mogu procijeniti)</label>
             </div>
@@ -1647,7 +1648,7 @@
                 id="option1"
                 name="question25"
                 value="1"
-                v-model="forma.dvadesetPeto"
+                v-model="forma[24]"
               />
               <label class="checkboxtext" for="option1">1</label>
             </div>
@@ -1658,7 +1659,7 @@
                 id="option2"
                 name="question25"
                 value="2"
-                v-model="forma.dvadesetPeto"
+                v-model="forma[24]"
               />
               <label class="checkboxtext" for="2">2</label>
             </div>
@@ -1669,7 +1670,7 @@
                 id="option3"
                 name="question25"
                 value="3"
-                v-model="forma.dvadesetPeto"
+                v-model="forma[24]"
               />
               <label class="checkboxtext" for="3">3</label>
             </div>
@@ -1680,7 +1681,7 @@
                 id="option4"
                 name="question25"
                 value="3"
-                v-model="forma.dvadesetPeto"
+                v-model="forma[24]"
               />
               <label class="checkboxtext" for="4">4</label>
             </div>
@@ -1691,7 +1692,7 @@
                 id="option5"
                 name="question25"
                 value="5"
-                v-model="forma.dvadesetPeto"
+                v-model="forma[24]"
               />
               <label class="checkboxtext" for="5">5</label>
             </div>
@@ -1703,7 +1704,7 @@
                 id="option6"
                 name="question25"
                 value="6"
-                v-model="forma.dvadesetPeto"
+                v-model="forma[24]"
               />
               <label class="checkboxtext" for="6">ne znam (ne mogu procijeniti)</label>
             </div>
@@ -1722,7 +1723,7 @@
                 id="option1"
                 name="question26"
                 value="1"
-                v-model="forma.dvadesetSesto"
+                v-model="forma[25]"
               />
               <label class="checkboxtext" for="option1">1</label>
             </div>
@@ -1733,7 +1734,7 @@
                 id="option2"
                 name="question26"
                 value="2"
-                v-model="forma.dvadesetSesto"
+                v-model="forma[25]"
               />
               <label class="checkboxtext" for="2">2</label>
             </div>
@@ -1744,7 +1745,7 @@
                 id="option3"
                 name="question26"
                 value="3"
-                v-model="forma.dvadesetSesto"
+                v-model="forma[25]"
               />
               <label class="checkboxtext" for="3">3</label>
             </div>
@@ -1755,7 +1756,7 @@
                 id="option4"
                 name="question26"
                 value="3"
-                v-model="forma.dvadesetSesto"
+                v-model="forma[25]"
               />
               <label class="checkboxtext" for="4">4</label>
             </div>
@@ -1766,7 +1767,7 @@
                 id="option5"
                 name="question26"
                 value="5"
-                v-model="forma.dvadesetSesto"
+                v-model="forma[25]"
               />
               <label class="checkboxtext" for="5">5</label>
             </div>
@@ -1778,7 +1779,7 @@
                 id="option6"
                 name="question26"
                 value="6"
-                v-model="forma.dvadesetSesto"
+                v-model="forma[25]"
               />
               <label class="checkboxtext" for="6">ne znam (ne mogu procijeniti)</label>
             </div>
@@ -1787,7 +1788,7 @@
       </div>
       <h2 class="komentar-naslov">Komentar:</h2>
       <div class="card comment">
-        <textarea name="komentar" cols="30" rows="8"></textarea>
+        <textarea name="komentar" cols="30" rows="8" v-model="forma[26]"></textarea>
       </div>
 
       <div class="card-button">
@@ -1804,43 +1805,13 @@ export default {
   data() {
     return {
       prof_id: this.$route.params.id,
-      forma: {
-        prvo: "",
-        drugo: "",
-        trece: "",
-        cetvrto: "",
-        peto: "",
-        sesto: "",
-        sedmo: "",
-        osmo: "",
-        deveto: "",
-        deseto: "",
-        jedanaesto: "",
-        dvanaesto: "",
-        trinaesto: "",
-        cetrnaesto: "",
-        petnaesto: "",
-        sesnaesto: "",
-        sedamnaesto: "",
-        osamnaesto: "",
-        devetnaesto: "",
-        dvadeseto: "",
-        dvadesetPrvo: "",
-        dvadesetDrugo: "",
-        dvadesetTrece: "",
-        dvadesetCetvrto: "",
-        dvadesetPeto: "",
-        dvadesetSesto: "",
-
-        komentar: ""
-      }
+      forma: []
     };
   },
   methods: {
     async form() {
       const user = await auth.getUser();
-      this.forma.userEmail = user.email;
-
+      this.forma = {...this.forma, userEmail: user.email}
       const save = await anketa.create(this.prof_id, this.forma);
       if (save.message == "success.") {
         this.$router.push("/popis");
