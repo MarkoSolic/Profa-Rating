@@ -64,19 +64,19 @@ const auth = {
       email: email,
       password: password,
     });
-    console.log(response);
+
     let data = await response.data;
     let status = response.status;
 
     if (status == 400)
       return {
-        status: false,
+        success: false,
         message: data,
       };
     else {
       localStorage.setItem("user", JSON.stringify(data));
       return {
-        status: true,
+        success: true,
       };
     }
   },

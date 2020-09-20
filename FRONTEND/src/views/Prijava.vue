@@ -1,4 +1,4 @@
-<template >
+<template>
   <div id="login" class="container-fluid card-prijava">
     <div class="col-xs-12 .col-sm-12 .col-md-12 col-lg-12">
       <h1>
@@ -10,7 +10,7 @@
       class="alert alertCustom"
       role="alert"
       v-show="errorHandler.status"
-    >{{errorHandler.message}}</div>
+    >{{ errorHandler.message }}</div>
     <form @submit.prevent="login">
       <div class="row">
         <div class="col-xs-12 .col-sm-12 .col-md-12 col-lg-12">
@@ -97,7 +97,7 @@ export default {
     async login() {
       let didItPass = await auth.login(this.email, this.lozinka);
 
-      if (didItPass.status == true) {
+      if (didItPass.success == true) {
         this.$router.push({ path: "popis" });
       } else {
         this.errorHandler.status = true;

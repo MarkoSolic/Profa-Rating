@@ -1832,8 +1832,8 @@ export default {
         dvadesetPeto: "",
         dvadesetSesto: "",
 
-        komentar: ""
-      }
+        komentar: "",
+      },
     };
   },
   methods: {
@@ -1845,8 +1845,8 @@ export default {
       if (save.message == "success.") {
         this.$router.push("/popis");
       }
-    }
-  }
+    },
+  },
 };
 </script>
 <style  scoped>
