@@ -11,26 +11,35 @@ router.post("/:kljuc", verify, async (req, res) => {
 
   let prof_id = req.params.kljuc;
 
-  let forma = req.body;
-  let id = new ObjectID();
-  let formaWId = { _id: id, ...forma };
+  const forma = req.body;
+  const id = new ObjectID();
 
-  try {
-    await db.collection("predavaci").updateOne(
-      { _id: mongo.ObjectId(prof_id) },
-      {
-        $push: {
-          forma: formaWId,
-        },
-      }
-    );
+  const formaWId = { ...forma, _id: id };
 
-    res.send({
-      id: id,
-      message: "success.",
-    });
-  } catch (err) {
-    res.status(400).send(err);
+  let valuesArray = Object.values(formaWId);
+  const usersEmail = valuesArray[valuesArray.length - 2];
+
+  const user = await db.collection("users").findOne({ email: usersEmail });
+
+  if (!user) res.status(400).send("Ne postoji email adresa.");
+  else {
+    try {
+      await db.collection("predavaci").updateOne(
+        { _id: mongo.ObjectId(prof_id) },
+        {
+          $push: {
+            forma: formaWId,
+          },
+        }
+      );
+
+      res.send({
+        id: id,
+        message: "success.",
+      });
+    } catch (err) {
+      res.status(400).send(err);
+    }
   }
 });
 
