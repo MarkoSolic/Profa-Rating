@@ -1,7 +1,7 @@
 <template>
-  <div class="topnav" id="myTopnav">
+  <div class="topnav">
     <div>
-      <a class="button" href="/about" v-bind:class="{ currentLink: isActive }">
+      <a class="button" href="/about">
         <span>| About</span>
       </a>
     </div>
@@ -26,7 +26,7 @@
       </a>
     </div>
     <div v-if="auth.authenticated">
-      <a href="javascript:void(0);" class="icon" @click="myFunction">
+      <a class="icon">
         <i class="fa fa-bars"></i>
       </a>
     </div>
@@ -49,14 +49,6 @@ export default {
     },
     openLogin() {
       this.$store.commit("prijava");
-    },
-    myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
     },
   },
 };
