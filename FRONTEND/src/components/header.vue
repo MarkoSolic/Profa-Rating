@@ -39,7 +39,6 @@ export default {
   data() {
     return {
       auth: auth.state,
-      isActive: false,
     };
   },
   methods: {

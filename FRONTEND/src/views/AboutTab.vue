@@ -211,9 +211,6 @@ export default {
     idiHome() {
       this.$router.push({ name: "About" });
     },
-    zamjena() {
-      if (this.prikaziEmail == false) this.prikaziEmail = true;
-    },
     async updatePassword() {
       if (this.new_password == this.new_password2) {
         let response = await updateProfile.updatePassword(
