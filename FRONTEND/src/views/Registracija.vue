@@ -76,20 +76,41 @@
           <label type="faks" for="faks" required></label>
           <select class="form-control" id="faks" v-model="faks">
             <option selected>Odaberite...</option>
-            <option value="fet">Fakultet ekonimije i turizma "Dr. Mijo Mirković"</option>
-            <option value="fooz">Fakultet za odgojne i obrazovne znanosti</option>
+            <option value="fet"
+              >Fakultet ekonimije i turizma "Dr. Mijo Mirković"</option
+            >
+            <option value="fooz"
+              >Fakultet za odgojne i obrazovne znanosti</option
+            >
             <option value="ffpu">Filozofski fakultet</option>
             <option value="fitiks">
-              Fakultet za interdisciplinarne, talijanske i kulturološke
-              studije
+              Fakultet za interdisciplinarne, talijanske i kulturološke studije
             </option>
             <option value="fipu">Fakultet informatike u Puli</option>
             <option value="mfpu">Medicinski fakultet u Puli</option>
           </select>
         </div>
 
+        <div class="input-group mb-5">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i class="fas fa-key"></i>
+            </span>
+          </div>
+          <input
+            type="password"
+            name="password"
+            required
+            class="form-control"
+            placeholder="Unesite datum"
+            v-model="datum"
+          />
+        </div>
+
         <div class="register">
-          <button type="submit" class="btn btn-primary btn-lg">Registriraj se</button>
+          <button type="submit" class="btn btn-primary btn-lg">
+            Registriraj se
+          </button>
         </div>
       </form>
     </div>
@@ -106,6 +127,7 @@ export default {
       password: "",
       newPassword: "",
       faks: "",
+      datum: "",
     };
   },
   methods: {
@@ -114,7 +136,12 @@ export default {
       else if (this.password != this.newPassword)
         console.log("Passwords dont match.");
       else {
-        let data = await auth.signup(this.email, this.password, this.faks);
+        let data = await auth.signup(
+          this.email,
+          this.password,
+          this.faks,
+          this.datum
+        );
 
         if (data == "success.") {
           let success = await auth.login(this.email, this.password);
