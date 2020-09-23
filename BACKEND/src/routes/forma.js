@@ -34,8 +34,7 @@ router.post("/:kljuc", verify, async (req, res) => {
       );
 
       res.send({
-        id: id,
-        message: "success.",
+        id: prof_id,
       });
     } catch (err) {
       res.status(400).send(err);

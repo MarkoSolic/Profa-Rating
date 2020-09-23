@@ -1795,6 +1795,11 @@
         <button class="btn btn-primary btn-lg" type="submit">Pošalji</button>
       </div>
     </form>
+    <div
+      class="alert alertCustom"
+      role="alert"
+      v-show="errorMsg.status"
+    >{{ errorMsg.message }}</div>
   </div>
 </template>
 <script>
@@ -1805,7 +1810,11 @@ export default {
   data() {
     return {
       prof_id: this.$route.params.id,
-      forma: []
+      forma: [],
+      errorMsg: {
+        status: false,
+        message: ''
+      }
     };
   },
   methods: {
@@ -1813,8 +1822,12 @@ export default {
       const user = await auth.getUser();
       this.forma = {...this.forma, userEmail: user.email}
       const save = await anketa.create(this.prof_id, this.forma);
-      if (save.message == "success.") {
+      if (save.id == this.prof_id) {
         this.$router.push("/popis");
+      }
+      else{
+        this.errorMsg.status = true,
+        this.errorMsg.message = save
       }
     },
   },
