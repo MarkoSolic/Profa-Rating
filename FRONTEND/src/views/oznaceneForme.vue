@@ -1,18 +1,15 @@
 <template>
-  <div class="container-fluid p-0">
-    <div class="row np-gutters">
-      <div class="w3-container col-xs-12 .col-sm-12 .col-md-12 col-lg-12">
-        <appheader class="navbar-about"></appheader>
+  <div class="w3-container">
+    <appheader class="navbar-about"></appheader>
 
-        <div class="container w3-center w3-animate-right">
-          <div v-for="profesor in profesori" :key="profesor._id">
-            <kartica :info="profesor"/>
-          </div>
-        </div>
+    <div class="container w3-center w3-animate-right">
+      <div v-for="profesor in profesoriIspunjeno" :key="profesor._id">
+        <kartica :info="profesor" :oznacene="true"/>
       </div>
     </div>
   </div>
 </template>
+
 
 <script>
 import { profs, auth } from "@/services";
@@ -23,12 +20,12 @@ export default {
   name: "Home",
   data() {
     return {
-      profesori: []
+      profesoriIspunjeno: []
     };
   },
   components: {
     kartica,
-    appheader
+    appheader,
   },
   async created() {
     this.fetchPosts();
@@ -36,15 +33,25 @@ export default {
   methods: {
     async fetchPosts() {
       let faks = auth.getFaks();
-      this.profesori = await profs.getNeoznacene(faks);
-    }
-  }
+      this.profesoriIspunjeno = await profs.getOznacene(faks);
+    },
+  },
 };
 </script>
 <style scoped>
+.container {
+  margin: 0px auto 10x;
+  padding: 0px;
+  font-family: "Gotu", sans-serif;
+  text-align: center;
+  height: 100%;
+  pointer-events: none;
+}
 .w3-container {
   padding: 0px;
   margin: 0px;
+  opacity: 0.9;
+
 }
 .navbar-about {
   -webkit-animation: w100 3s ease backwards;
@@ -53,7 +60,6 @@ export default {
 .navbar-about w100 {
   margin-left: 0%;
 }
-
 @-webkit-keyframes w100 {
   from {
     margin-left: 50%;
@@ -62,25 +68,15 @@ export default {
     margin-left: 0%;
   }
 }
+.card{
+  background-color: lightcoral;
+}
 @keyframes w100 {
   from {
     margin-left: 50%;
   }
   to {
     margin-left: 0%;
-  }
-}
-
-@media (width: 375px) {
-  * {
-    margin: 0px;
-    padding: 0px;
-  }
-}
-@media (max-width: 1250px) {
-  * {
-    margin: 0px;
-    padding: 0px;
   }
 }
 </style>

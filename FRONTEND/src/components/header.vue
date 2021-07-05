@@ -1,41 +1,80 @@
 <template>
-  <div class="naslov">
-    <div class="title">Profa rating</div>
-    <div class="subtitle">Ocijenite vašeg profesora</div>
-    <div id="header">
-      <div id="app-header">
-        <ul type="button" class="navbar">
-          <button class="button">
-            <router-link class="link" to="/">
-              <span>Home</span>
-            </router-link>
-          </button>
-          <button class="button">
-            <router-link class="link" to="/popis">
-              <span>Popis</span>
-            </router-link>
-          </button>
-          <button class="button">
-            <router-link class="link" to="/about">
-              <span>About</span>
-            </router-link>
-          </button>
-        </ul>
-      </div>
+  <div class="topnav" id="myTopnav">
+    <div>
+      <a class="button" href="/about" v-bind:class="{ currentLink: isActive }">
+        <span>| About</span>
+      </a>
+    </div>
+    <div v-if="auth.authenticated">
+      <a class="button" href="/popis">
+        <span>| Popis</span>
+      </a>
+    </div>
+    <div v-if="auth.authenticated" class="button">
+      <a class="button" href="/oznacene">
+        <span>| Popunjene forme</span>
+      </a>
+    </div>
+    <div v-if="!auth.authenticated" v-on:click="openLogin()">
+      <a class="button">
+        <span>| Prijava</span>
+      </a>
+    </div>
+    <div v-if="auth.authenticated">
+      <a class="odjava button" @click="logout" href="/">
+        <span>| Odjavi se</span>
+      </a>
+    </div>
+    <div v-if="auth.authenticated">
+      <a href="javascript:void(0);" class="icon" @click="myFunction">
+        <i class="fa fa-bars"></i>
+      </a>
     </div>
   </div>
 </template>
+<script>
+import { auth } from "@/services";
+
+export default {
+  data() {
+    return {
+      auth: auth.state,
+      isActive: false,
+    };
+  },
+  methods: {
+    logout() {
+      auth.logout();
+      this.$router.go();
+    },
+    openLogin() {
+      this.$store.commit("prijava");
+    },
+    myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    },
+  },
+};
+</script>
 
 <style scoped>
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  border-radius: 0px 0px 0px 10px;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.384);
+  backdrop-filter: blur(5px);
+  -webkit-animation: w70 3s ease backwards;
+  animation: w70 3s ease backwards;
+}
 .button {
-  background-color: transparent;
-  border: none;
-  color: #ffffff;
-  font-size: 15px;
-  width: 200px;
   transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
 }
 .button span {
   cursor: pointer;
@@ -61,49 +100,50 @@
   opacity: 1;
   right: 0;
 }
+.topnav .w70 {
+  margin-left: 0%;
+}
+.topnav .w70 {
+  margin-left: 0%;
+}
 
-#header {
+.topnav a {
+  margin-right: 0.5%;
+  float: right;
   display: block;
-  background: #f2f3f5; /* navbar */
-  border-radius: 0px 0px 25px 25px;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+
+  font-size: 14px;
+}
+.topnav .icon {
+  display: none;
 }
 
-.link {
-  color: rgb(39, 25, 139);
-  font-weight: bold;
+@media screen and (max-width: 600px) {
+  .topnav a {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
 }
-.naslov {
-  margin-bottom: 5%;
-  text-align: center;
-  background-color: rgba(51, 62, 121, 0.842); /* gornji header */
-  border-radius: 0px 0px 26px 26px;
-}
-.subtitle {
-  color: #fff5ee;
-  font-size: 20px;
-  margin-bottom: 5%;
-}
-.navbar {
-  list-style: none;
-}
-.navbar li {
-  display: inline-block;
-  padding: 0px 20px;
-  letter-spacing: 0.5px;
-}
-.title {
-  padding-bottom: 5%;
-  padding-top: 5%;
-  font-size: 60px;
-  color: #fff5ee;
-  cursor: pointer;
-  font-family: "Abril Fatface", cursive;
-  letter-spacing: 0.1em;
-  transition: 0.3s;
-}
-.title:hover {
-  letter-spacing: 10px;
-  color: black;
-  text-shadow: #e0e0e0 1px 1px 0;
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 }
 </style>
