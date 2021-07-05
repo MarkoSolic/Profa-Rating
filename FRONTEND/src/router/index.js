@@ -1,19 +1,20 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import { auth } from "@/services";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home,
-  },
-  {
-    path: "/about",
     name: "About",
     component: () => import("../views/About.vue"),
+  },
+
+  {
+    path: "/about",
+    name: "AboutTab",
+    component: () => import("../views/AboutTab.vue"),
   },
 
   {
@@ -26,12 +27,47 @@ const routes = [
     name: "Popis",
     component: () => import("../views/Popis.vue"),
   },
+  {
+    path: "/oznacene",
+    name: "Oznacene",
+    component: () => import("../views/oznaceneForme.vue"),
+  },
+  {
+    path: "/prijava",
+    name: "Prijava",
+    component: () => import("../views/Prijava.vue"),
+  },
+  {
+    path: "/anketa/:id",
+    name: "Anketa",
+    component: () => import("../components/anketa.vue"),
+  },
+  {
+    path: "/profil",
+    name: "Profil",
+    component: () => import("../components/profil.vue"),
+  },
 ];
 
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
   routes,
+});
+
+router.beforeEach((to, from, next) => {
+  const publicPages = ["/", "/about"];
+  const authRequired = !publicPages.includes(to.path);
+  const user = auth.getUser();
+
+  if (!authRequired && user) {
+    return next("/popis");
+  }
+
+  if (authRequired && !user) {
+    return next("/");
+  }
+  next();
 });
 
 export default router;

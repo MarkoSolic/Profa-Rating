@@ -1,45 +1,34 @@
 <template>
-
-<div class="container">
-  <div id="app">
-    <div id="nav">
-      <app-header/>
+  <div>
+    <div id="app">
+      <div id="content">
+        <router-view />
+      </div>
     </div>
-    <div id="content">
-       <router-view/>
+    <div class="container footy">
+      <appFooter />
     </div>
-   
   </div>
-  </div>
-  
 </template>
 
 <script>
-import header from "@/components/header"
-
+import appFooter from "@/components/footer";
 export default {
   name: "App",
   components: {
-    "app-header": header
+    appFooter
   }
-}
+};
 </script>
 
 <style >
-body{
-  font-family: 'Gotu', sans-serif;
-  margin: 0;
-  padding: 0;
-  height: 100vw;
-  background: white;
-  
-
-} 
-#app{
- background: white;  /* donja pozadina */
- height: 1080px;
- 
+body {
+  background-image: linear-gradient(to right, #014083, #178c9e);
 }
-
-
+.footy {
+  margin-top: 100px;
+  border-top: 1px solid white;
+  color: #014083;
+  -webkit-text-stroke: 1px black;
+}
 </style>

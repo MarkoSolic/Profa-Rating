@@ -28,13 +28,13 @@ export default {
     appheader
   },
   async created() {
-    this.fetchPosts();
+    // this.fetchPosts();
   },
   methods: {
-    async fetchPosts() {
-      let faks = auth.getFaks();
-      this.profesori = await profs.getall(faks);
-    }
+    // async fetchPosts() {
+    //   let faks = auth.getFaks();
+    //   this.profesori = await profs.getall(faks);
+    // }
   }
 };
 </script>
